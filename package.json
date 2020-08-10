@@ -10,7 +10,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "vue": "^2.5.22",
+    "vue": "^2.6.11",
     "vue-router": "^3.0.1",
     "vue-tabulator": "1.0.0",
     "vuex": "^3.0.1"
@@ -30,6 +30,6 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.6.11"
   }
 }
