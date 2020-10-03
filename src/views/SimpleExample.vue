@@ -9,11 +9,13 @@
 </template>
 
 <script>
+import { createList, createItem } from '../util'
+
 export default {
   name: "home",
   data() {
     return {
-      data: [{ name: "Teste", age: 13 }],
+      data: createList(),
       options: {
         layout:"fitDataFill",
         columns: [
@@ -21,8 +23,7 @@ export default {
             title: "Name",
             field: "name",
             sorter: "string",
-            width: 200,
-            editor: true
+            width: 200
           }
         ]
       }
@@ -30,15 +31,14 @@ export default {
   },
   methods: {
     newRow() {
-      this.data.push({ name: "Teste 2", age: 15 });
+      this.data.push(createItem());
     },
     newColumn() {
       this.options.columns.push({
         title: "age",
         field: "age",
         sorter: "number",
-        width: 300,
-        editor: false
+        width: 300
       });
     },
     clearTable() {
