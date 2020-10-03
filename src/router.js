@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+import SimpleExample from './views/SimpleExample.vue';
 
 Vue.use(Router);
 
@@ -8,16 +8,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home,
+      name: 'SimpleExample',
+      component: SimpleExample,
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      path: '/editable',
+      name: 'EditableExample',
+      component: () => import(/* webpackChunkName: "about" */ './views/EditableExample.vue'),
+    },
+    {
+      path: '/dateformat',
+      name: 'DateFormatExample',
+      component: () => import(/* webpackChunkName: "about" */ './views/DateFormatExample.vue'),
     },
   ],
 });
